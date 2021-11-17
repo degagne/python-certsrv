@@ -96,9 +96,9 @@ def retrieve_cert(expected_header: str):
 
     :param expected_header: The expected 'Content-Type' header for the 
         certificate request.
-    :return The issued certificate.
+    :return: The issued certificate.
     :raise CertificateRetrievalError: If the certificate 'Content-Type' 
-            header doesn't match the expected type.
+        header doesn't match the expected type.
     """
     def wrap(func: Callable):
         @functools.wraps(func)
@@ -123,7 +123,6 @@ class Certsrv:
     Web Enrollment service, to create and retrieve certificates from
     the Active Directory Certificate Servers (ADCS).
 
-    Args:
     :param server: The FQDN of the Active Directory Certificate Service server.
     :param username: The username for authentication
     :param password: The password for authentication
