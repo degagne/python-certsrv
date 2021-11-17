@@ -1,12 +1,13 @@
 import os
 import imp
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 setup(
     name="python-certsrv",
-    version=imp.load_source("version", os.path.join("version.py")).version,
+    version=imp.load_source("certsrv.version", os.path.join("certsrv", "version.py")).version,
+    packages=find_packages(exclude=["tests", "tests.*"]),
     install_requires=[
         "requests",
         "requests_ntlm3",
@@ -16,7 +17,6 @@ setup(
     description="A Python client for the Active Directory Certificate Service Web Enrollment.",
     url="https://github.com/degagne/python-certsrv",
     keywords='ad adcs certsrv pki certificate',
-    py_modules=['certsrv'],
     license="MIT",
     classifiers=[
         "Development Status :: 5 - Production/Stable",

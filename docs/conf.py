@@ -20,7 +20,7 @@ author = "Deric Degagne"
 # built documents.
 #
 # The full version, including alpha/beta/rc tags.
-release = imp.load_source("version", os.path.join("../", "version.py")).version
+release = imp.load_source("certsrv.version", os.path.join("../certsrv", "version.py")).version
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
