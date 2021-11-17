@@ -1,15 +1,8 @@
-import os
-import imp
-
 from setuptools import setup
-
-
-version = imp.load_source(os.path.join("version.py")).version
 
 
 setup(
     name="python-certsrv",
-    version=version,
     install_requires=[
         "requests",
         "requests_ntlm3",
