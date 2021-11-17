@@ -4,7 +4,7 @@ import imp
 from setuptools import setup
 
 
-version = imp.load_source("version", os.path.join("version.py")).version
+version = imp.load_source(os.path.join("version.py")).version
 
 
 setup(
